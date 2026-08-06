@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="One Stick Mobile Phlebotomy offers professional mobile blood-draw services in Memphis and surrounding areas." />
+  <title>One Stick Mobile Phlebotomy</title>
+  <style>
+    :root{
+      --red:#c1121f;
+      --red-dark:#8f0d17;
+      --purple:#7b2cbf;
+      --purple-dark:#4f176f;
+      --lavender:#f7f0fb;
+      --white:#ffffff;
+      --ink:#2b1733;
+      --muted:#6d5d72;
+      --line:#eadcf2;
+      --soft:#fbf8fd;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--soft);
+      color:var(--ink);
+      line-height:1.55;
+    }
+
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1100px,92%);margin:auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:14px 0;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:.3px;
+    }
+
+    .brand span{color:var(--purple)}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+
+    .hero{
+      background:linear-gradient(135deg,var(--purple-dark),var(--purple),var(--red));
+      color:white;
+      padding:80px 0 70px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:1.8px;
+      font-weight:800;
+      color:#f8d8ff;
+    }
+
+    h1{
+      font-size:clamp(40px,7vw,70px);
+      line-height:1.02;
+      margin:12px 0 18px;
+    }
+
+    h2{
+      font-size:clamp(28px,4vw,42px);
+      margin:0 0 12px;
+      color:var(--purple-dark);
+    }
+
+    h3{margin:0 0 8px}
+
+    .lead{
+      font-size:19px;
+      max-width:760px;
+      color:#f5eaf8;
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:24px;
+      padding:24px;
+    }
+
+    .hero-card strong{display:block;font-size:18px;margin-bottom:10px}
+
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .btn{
+      display:inline-block;
+      border:none;
+      cursor:pointer;
+      padding:13px 20px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:15px;
+    }
+
+    .btn.primary{background:var(--red);color:white}
+    .btn.primary:hover{background:var(--red-dark)}
+    .btn.light{background:white;color:var(--purple-dark)}
+    .btn.outline{border:1px solid white;color:white;background:transparent}
+    .btn.purple{background:var(--purple);color:white}
+
+    section{padding:64px 0}
+    .section-intro{max-width:760px;margin-bottom:26px}
+    .muted{color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .service-icon{
+      width:42px;height:42px;border-radius:12px;
+      display:grid;place-items:center;
+      background:#f2e4fb;color:var(--purple);
+      font-size:20px;margin-bottom:14px;
+    }
+
+    .pricing{
+      background:white;
+    }
+
+    .price{
+      font-size:30px;
+      font-weight:800;
+      color:var(--red);
+      margin:8px 0;
+    }
+
+    .notice{
+      background:#fff5f6;
+      border-left:5px solid var(--red);
+      border-radius:12px;
+      padding:18px;
+      margin:20px 0;
+    }
+
+    form{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px;
+    }
+
+    .formgrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    label{
+      display:block;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    input,select,textarea{
+      width:100%;
+      margin-top:7px;
+      padding:13px;
+      border:1px solid #cfc1d5;
+      border-radius:10px;
+      background:white;
+      font:inherit;
+    }
+
+    .full{grid-column:1/-1}
+    .small{font-size:13px;color:var(--muted)}
+
+    .testimonial{
+      border-left:4px solid var(--purple);
+    }
+
+    .sharebox{
+      background:linear-gradient(135deg,var(--purple-dark),var(--red-dark));
+      color:white;
+      border-radius:22px;
+      padding:30px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    footer{
+      background:var(--ink);
+      color:white;
+      text-align:center;
+      padding:30px 0;
+    }
+
+    @media(max-width:800px){
+      .hero-grid,.grid,.contact-grid,.formgrid{grid-template-columns:1fr}
+      .full{grid-column:auto}
+      .navlinks{display:none}
+      .hero{padding-top:60px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">ONE STICK <span>MOBILE PHLEBOTOMY</span></div>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#fees">Fees</a>
+        <a href="#book">Book</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Where Precision Meets Compassion</div>
+        <h1>Professional blood draws brought directly to you.</h1>
+        <p class="lead">Serving homes, workplaces, senior communities, and approved facilities throughout Memphis and surrounding areas.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#book">Request an Appointment</a>
+          <a class="btn light" href="tel:+19013479203">Call 901-347-9203</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <strong>Why patients choose One Stick</strong>
+        <p>Convenient mobile visits</p>
+        <p>Professional, compassionate service</p>
+        <p>Flexible appointment requests</p>
+        <p>Clear, upfront pricing</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="eyebrow" style="color:var(--purple)">Services</div>
+        <h2>Mobile specimen collection made easier</h2>
+        <p class="muted">Patients with valid orders from licensed healthcare providers may request collection for eligible laboratory tests.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card"><div class="service-icon">🩸</div><h3>Routine Blood Draws</h3><p class="muted">Professional collection for eligible physician-ordered testing.</p></div>
+        <div class="card"><div class="service-icon">🏠</div><h3>Home Visits</h3><p class="muted">Private blood-draw appointments in the comfort of your home.</p></div>
+        <div class="card"><div class="service-icon">🏢</div><h3>Employer Services</h3><p class="muted">On-site collections for approved occupational or wellness programs.</p></div>
+        <div class="card"><div class="service-icon">👵</div><h3>Senior & Facility Visits</h3><p class="muted">Scheduled services for senior communities and approved facilities.</p></div>
+        <div class="card"><div class="service-icon">📦</div><h3>Specialty Kits</h3><p class="muted">Specialty-kit collection after requirements and shipping instructions are reviewed.</p></div>
+        <div class="card"><div class="service-icon">🔁</div><h3>Recurring Draws</h3><p class="muted">Convenient scheduling for patients who need repeated collections.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fees" class="pricing">
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="eyebrow" style="color:var(--red)">Transparent Pricing</div>
+        <h2>Mobile service fees</h2>
+        <p class="muted">Laboratory testing charges are separate and may be billed by the laboratory or ordering provider.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card"><h3>Standard Mobile Visit</h3><div class="price">$65</div><p class="muted">One patient within the standard Memphis service area.</p></div>
+        <div class="card"><h3>Additional Patient</h3><div class="price">$35</div><p class="muted">At the same location and appointment time.</p></div>
+        <div class="card"><h3>Weekend / Early Morning</h3><div class="price">+$25</div><p class="muted">Added outside standard business hours.</p></div>
+        <div class="card"><h3>Specialty Collection Kit</h3><div class="price">From $85</div><p class="muted">Depends on collection, processing, and shipping requirements.</p></div>
+        <div class="card"><h3>Extended Travel</h3><div class="price">Quote</div><p class="muted">For locations outside the standard service area.</p></div>
+        <div class="card"><h3>Facilities & Employers</h3><div class="price">Custom</div><p class="muted">Volume and recurring-service pricing available.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="eyebrow" style="color:var(--purple)">Appointment Request</div>
+        <h2>Request a mobile blood draw</h2>
+      </div>
+
+      <div class="notice">
+        <strong>Privacy notice:</strong> Do not enter lab orders, diagnoses, dates of birth, insurance information, or test details in this public form. One Stick will arrange a secure way to receive required medical documents after contacting you.
+      </div>
+
+      <form id="appointmentForm">
+        <div class="formgrid">
+          <label>Full name *
+            <input id="name" required autocomplete="name" />
+          </label>
+
+          <label>Phone number *
+            <input id="phone" required type="tel" autocomplete="tel" />
+          </label>
+
+          <label>Email address
+            <input id="email" type="email" autocomplete="email" />
+          </label>
+
+          <label>Preferred date *
+            <input id="date" required type="date" />
+          </label>
+
+          <label>Preferred time *
+            <select id="time" required>
+              <option value="">Select a time</option>
+              <option>7:00 AM–9:00 AM</option>
+              <option>9:00 AM–11:00 AM</option>
+              <option>11:00 AM–1:00 PM</option>
+              <option>1:00 PM–3:00 PM</option>
+              <option>3:00 PM–5:00 PM</option>
+            </select>
+          </label>
+
+          <label>General service *
+            <select id="service" required>
+              <option value="">Choose a service</option>
+              <option>Routine mobile blood draw</option>
+              <option>Recurring blood draw</option>
+              <option>Specialty collection kit</option>
+              <option>Facility or group service</option>
+              <option>Employer service</option>
+            </select>
+          </label>
+
+          <label class="full">City or ZIP code *
+            <input id="location" required placeholder="Do not enter your full street address here" />
+          </label>
+
+          <div class="full">
+            <p class="small">Selecting “Send Request” opens a prewritten text message to One Stick. Your appointment is not confirmed until you receive a response.</p>
+            <button class="btn primary" type="submit">Send Appointment Request</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="eyebrow" style="color:var(--red)">Patient Experience</div>
+        <h2>Professional care that comes to you</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card testimonial"><p>“Professional, patient, and made the process much easier.”</p><strong>— Patient Review</strong></div>
+        <div class="card testimonial"><p>“Convenient service and a very comfortable experience.”</p><strong>— Patient Review</strong></div>
+        <div class="card testimonial"><p>“Reliable, compassionate, and right on time.”</p><strong>— Patient Review</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="share">
+    <div class="wrap">
+      <div class="sharebox">
+        <div class="eyebrow">Help Spread the Word</div>
+        <h2 style="color:white">Share One Stick Mobile Phlebotomy</h2>
+        <p>Need blood work without sitting in a crowded waiting room? One Stick provides professional mobile blood-draw services in Memphis and surrounding areas.</p>
+        <div class="buttons">
+          <button class="btn light" id="nativeShare" type="button">Share Website</button>
+          <a class="btn outline" id="textShare" href="#">Share by Text</a>
+          <a class="btn outline" id="facebookShare" target="_blank" rel="noopener">Share on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="card">
+        <h2>Contact One Stick</h2>
+        <p><strong>Phone:</strong> <a href="tel:+19013479203">901-347-9203</a></p>
+        <p><strong>Service Area:</strong> Memphis and surrounding communities</p>
+        <p><strong>Email:</strong> Add your business email before publishing</p>
+      </div>
+
+      <div class="card">
+        <h2>Important Information</h2>
+        <p class="muted">One Stick Mobile Phlebotomy provides specimen-collection services and does not diagnose conditions, prescribe treatment, or interpret laboratory results.</p>
+        <p class="muted">For emergencies, call 911.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>One Stick Mobile Phlebotomy</strong>
+    <p>Memphis, Tennessee • 901-347-9203</p>
+    <p class="small">© 2026 One Stick Mobile Phlebotomy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("date").min = new Date().toISOString().split("T")[0];
+
+  document.getElementById("appointmentForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const service = document.getElementById("service").value;
+    const location = document.getElementById("location").value.trim();
+
+    const message =
+      `Hello One Stick Mobile Phlebotomy.%0A%0A` +
+      `I would like to request an appointment.%0A%0A` +
+      `Name: ${encodeURIComponent(name)}%0A` +
+      `Phone: ${encodeURIComponent(phone)}%0A` +
+      `Email: ${encodeURIComponent(email || "Not provided")}%0A` +
+      `Preferred date: ${encodeURIComponent(date)}%0A` +
+      `Preferred time: ${encodeURIComponent(time)}%0A` +
+      `Service: ${encodeURIComponent(service)}%0A` +
+      `City or ZIP: ${encodeURIComponent(location)}%0A%0A` +
+      `I understand this is only a request and must be confirmed.`;
+
+    window.location.href = `sms:+19013479203?body=${message}`;
+  });
+
+  const shareText = "Book professional mobile blood-draw services with One Stick Mobile Phlebotomy in Memphis and surrounding areas.";
+  const currentUrl = window.location.href;
+
+  document.getElementById("textShare").href =
+    `sms:?body=${encodeURIComponent(shareText + " " + currentUrl)}`;
+
+  document.getElementById("facebookShare").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+
+  document.getElementById("nativeShare").addEventListener("click", async function(){
+    if(navigator.share){
+      try{
+        await navigator.share({
+          title:"One Stick Mobile Phlebotomy",
+          text:shareText,
+          url:currentUrl
+        });
+      }catch(e){}
+    }else{
+      alert("Use the text or Facebook button to share this website.");
+    }
+  });
+</script>
+
+</body>
+</html>
